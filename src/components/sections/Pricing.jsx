@@ -22,19 +22,19 @@ export default function Pricing() {
       <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14">Pricing</h2>
       <div className="grid gap-6 md:grid-cols-3">
         <Card
-          name="Starter"
-          price="$0/mo"
-          features={["Up to 10 scans", "Basic PDF export", "Community support"]}
+          name="Standart"
+          price="₸990/mo"
+          features={["Up to 5 scans", "3 Basic PDF Reports export", "10 AI chat messages"]}
         />
         <Card
-          name="Pro"
-          price="$19/mo"
-          features={["Unlimited scans", "Priority queue", "Doctor‑ready reports"]}
+          name="Plus"
+          price="₸4990/mo"
+          features={["100 scans", "25 Deep-analysis PDF Reports", "Up to 40 AI chat messages"]}
         />
         <Card
-          name="Team"
-          price="$49/mo"
-          features={["Team workspace", "Shared reports", "Admin panel"]}
+          name="Premium"
+          price="₸15990/mo"
+          features={["Up to 650 scans", "70 Deep-analysis PDF Reports", "100 AI chat messagesl"]}
         />
       </div>
     </div>
