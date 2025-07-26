@@ -1,8 +1,13 @@
 import TopNav from "./TopNav.jsx";
 import Hero from "./sections/Hero.jsx";
 import WaveSeparator from "./shape/WaveSeparator.jsx";
-import Stats from "./sections/Stats.jsx";
+import Stats from "./sections/Stats.jsx";             // твой MVP Highlights
 import Features from "./sections/Features.jsx";
+import FeatureTabs from "./sections/FeatureTabs.jsx"; // NEW
+import Gallery from "./sections/Gallery.jsx";         // NEW
+import UseCases from "./sections/UseCases.jsx";       // NEW
+import PrivacyBadges from "./sections/PrivacyBadges.jsx"; // NEW
+import VideoDemo from "./sections/VideoDemo.jsx";     // NEW
 import Pricing from "./sections/Pricing.jsx";
 import FAQ from "./sections/FAQ.jsx";
 import Contact from "./sections/Contact.jsx";
@@ -13,27 +18,26 @@ export default function PresentationPage() {
     <div className="w-full min-h-screen overflow-x-clip">
       <TopNav />
 
-      {/* HERO */}
       <Hero />
-      {/* волна в цвет следующего блока */}
       <WaveSeparator color="#eff6ff" />
 
-      {/* STATS */}
       <Stats />
-      {/* белая волна к белой секции */}
       <WaveSeparator flip color="#ffffff" />
 
-      {/* FEATURES */}
       <Features />
+      <FeatureTabs />
+      <Gallery />
+      <PrivacyBadges />
+      <UseCases />
 
-      {/* Pricing */}
+      <VideoDemo youtubeId="dQw4w9WgXcQ" /> {/* ← замени на свой YouTube ID */}
+
       <section id="pricing" className="bg-white">
         <div className="container mx-auto px-4 py-20">
           <Pricing />
         </div>
       </section>
 
-      {/* FAQ */}
       <section id="faq" className="bg-blue-50/60">
         <div className="container mx-auto px-4 py-20">
           <FAQ />
@@ -41,14 +45,12 @@ export default function PresentationPage() {
       </section>
       <WaveSeparator flip color="#ffffff" />
 
-      {/* Contact */}
       <section id="contact" className="bg-white">
         <div className="container mx-auto px-4 py-20">
           <Contact />
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-blue-600 text-white py-10">
         <div className="container mx-auto px-4">
           <Footer />

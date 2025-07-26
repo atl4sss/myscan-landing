@@ -20,12 +20,9 @@ export default function TopNav() {
 
             {/* CTA для шоукейса (вместо Sign Up / Log In) */}
             <div className="hidden md:flex items-center gap-2">
-              <a
-                href="#hero"                                   // можно поменять на якорь с видео-демо
-                className="px-4 py-2 rounded-full bg-white/15 ring-1 ring-white/30 hover:bg-white/25 transition"
-              >
-                Watch Demo
-              </a>
+                <a href="#demo" className="px-4 py-2 rounded-full bg-white/15 ring-1 ring-white/30 hover:bg-white/25 transition">
+                    Watch Demo
+                </a>
 
             </div>
           </div>
