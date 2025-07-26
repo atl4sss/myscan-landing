@@ -4,11 +4,13 @@
   --font-poppins: Poppins, sans-serif;
 }
 /* гарантируем, что корень занимает всю ширину/высоту */
-html, body, #root {
-  width: 100%;
-  height: 100%;
-}
+/* базовые гарантии */
+html, body, #root { width:100%; height:100%; }
+body { margin:0; background:white; }
+*, *::before, *::after { box-sizing: border-box; }
 
+/* плавная прокрутка между слайдами */
+html { scroll-behavior: smooth; }
 /* убираем любые отступы и фон делаем белым */
 body { margin: 0; background: white; }
 
