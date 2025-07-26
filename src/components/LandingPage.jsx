@@ -18,7 +18,6 @@ export default function LandingPage() {
             <a className="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold shadow hover:shadow-lg transition" href="#get-started">
               Get Started
             </a>
-
           </div>
         </div>
       </section>

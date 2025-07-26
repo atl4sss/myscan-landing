@@ -2,7 +2,10 @@ import SectionReveal from "../SectionReveal.jsx";
 
 export default function Hero() {
   return (
-    <div id="hero" className="relative overflow-hidden text-white bg-gradient-to-br from-sky-600 via-blue-600 to-indigo-600">
+    <div
+      id="hero"
+      className="relative overflow-hidden text-white bg-gradient-to-br from-sky-600 via-blue-600 to-indigo-600"
+    >
       {/* декоративные пятна */}
       <div className="pointer-events-none absolute -top-20 -left-24 w-96 h-96 rounded-full bg-white/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-6rem] right-[-6rem] w-[28rem] h-[28rem] rounded-full bg-white/10 blur-3xl" />
@@ -11,7 +14,9 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Текст */}
           <SectionReveal className="w-full md:w-6/12">
-            <div className="uppercase tracking-[0.3em] text-white/80 text-xs mb-4">Welcome</div>
+            <div className="uppercase tracking-[0.3em] text-white/80 text-xs mb-4">
+              Welcome
+            </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
               Versatile App For <br className="hidden lg:inline" />
               Smart <span className="text-cyan-200">Diagnostics</span>
@@ -19,9 +24,15 @@ export default function Hero() {
             <p className="mt-6 text-lg md:text-xl text-blue-100/90 max-w-xl">
               AI‑powered medical image analysis — fast, accurate and secure.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a href="#pricing" className="px-8 py-3 rounded-full bg-white text-blue-700 font-semibold shadow-lg hover:shadow-xl transition text-center">Getting Started</a>
-              <a href="#contact" className="px-8 py-3 rounded-full bg-transparent border border-white/60 font-semibold hover:bg-white hover:text-blue-700 transition text-center">Download App</a>
+
+            {/* CTA — только одна кнопка */}
+            <div className="mt-8 flex justify-center md:justify-start">
+              <a
+                href="#pricing"
+                className="px-8 py-3 rounded-full bg-white text-blue-700 font-semibold shadow-lg hover:shadow-xl transition text-center"
+              >
+                Getting Started
+              </a>
             </div>
           </SectionReveal>
 
