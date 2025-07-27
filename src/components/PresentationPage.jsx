@@ -1,7 +1,7 @@
 import TopNav from "./TopNav.jsx";
 import Hero from "./sections/Hero.jsx";
 import WaveSeparator from "./shape/WaveSeparator.jsx";
-import Stats from "./sections/Stats.jsx";             // твой MVP Highlights
+import Stats from "./sections/Stats.jsx";             // MVP Highlights (как было)
 import Features from "./sections/Features.jsx";
 import FeatureTabs from "./sections/FeatureTabs.jsx"; // NEW
 import Gallery from "./sections/Gallery.jsx";         // NEW
@@ -13,31 +13,49 @@ import FAQ from "./sections/FAQ.jsx";
 import Contact from "./sections/Contact.jsx";
 import Footer from "./Footer.jsx";
 
+// NEW: уникальные секции
+import Roadmap from "./sections/Roadmap.jsx";
+import Comparison from "./sections/Comparison.jsx";
+
 export default function PresentationPage() {
   return (
     <div className="w-full min-h-screen overflow-x-clip">
       <TopNav />
 
+      {/* HERO */}
       <Hero />
       <WaveSeparator color="#eff6ff" />
 
+      {/* MVP HIGHLIGHTS */}
       <Stats />
-      <WaveSeparator flip color="#ffffff" />
 
+      {/* NEW: ROADMAP (таймлайн) — другой визуальный язык */}
+      <WaveSeparator flip color="#ffffff" />
+      <Roadmap />
+
+      {/* NEW: COMPARISON (таблица преимуществ) — ещё один формат */}
+      <WaveSeparator color="#eff6ff" />
+      <Comparison />
+
+      {/* Остальные секции как были */}
+      <WaveSeparator flip color="#ffffff" />
       <Features />
       <FeatureTabs />
       <Gallery />
       <PrivacyBadges />
       <UseCases />
 
-      <VideoDemo youtubeId="dQw4w9WgXcQ" /> {/* ← замени на свой YouTube ID */}
+      {/* Видео-демо (замени ID на свой) */}
+      <VideoDemo youtubeId="dQw4w9WgXcQ" />
 
+      {/* Pricing */}
       <section id="pricing" className="bg-white">
         <div className="container mx-auto px-4 py-20">
           <Pricing />
         </div>
       </section>
 
+      {/* FAQ */}
       <section id="faq" className="bg-blue-50/60">
         <div className="container mx-auto px-4 py-20">
           <FAQ />
@@ -45,12 +63,14 @@ export default function PresentationPage() {
       </section>
       <WaveSeparator flip color="#ffffff" />
 
+      {/* Contact */}
       <section id="contact" className="bg-white">
         <div className="container mx-auto px-4 py-20">
           <Contact />
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="bg-blue-600 text-white py-10">
         <div className="container mx-auto px-4">
           <Footer />
