@@ -1,11 +1,9 @@
 // src/components/TopNav.jsx
 import { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll";
 
 export default function TopNav() {
   const [scrolled, setScrolled] = useState(false);
 
-  // Отслеживаем прокрутку для переключения тени
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
@@ -21,7 +19,8 @@ export default function TopNav() {
         ${scrolled ? "shadow-lg" : "shadow-sm"}
       `}
     >
-      <div className="mx-auto max-w-7xl px-4">
+      {/* вот заменили max-w-7xl → max-w-screen-xl */}
+      <div className="mx-auto max-w-screen-xl px-4">
         <div className="h-16 flex items-center justify-between">
           {/* Лого */}
           <a
@@ -33,38 +32,30 @@ export default function TopNav() {
 
           {/* Меню для десктопа */}
           <nav className="hidden md:flex space-x-8">
-            <ScrollLink
-              to="features"
-              smooth
-              duration={300}
-              className="cursor-pointer text-gray-800 hover:text-blue-600 transition"
+            <a
+              href="#features"
+              className="text-gray-800 hover:text-blue-600 transition"
             >
               Features
-            </ScrollLink>
-            <ScrollLink
-              to="pricing"
-              smooth
-              duration={300}
-              className="cursor-pointer text-gray-800 hover:text-blue-600 transition"
+            </a>
+            <a
+              href="#pricing"
+              className="text-gray-800 hover:text-blue-600 transition"
             >
               Pricing
-            </ScrollLink>
-            <ScrollLink
-              to="faq"
-              smooth
-              duration={300}
-              className="cursor-pointer text-gray-800 hover:text-blue-600 transition"
+            </a>
+            <a
+              href="#faq"
+              className="text-gray-800 hover:text-blue-600 transition"
             >
               FAQ
-            </ScrollLink>
-            <ScrollLink
-              to="contact"
-              smooth
-              duration={300}
-              className="cursor-pointer text-gray-800 hover:text-blue-600 transition"
+            </a>
+            <a
+              href="#contact"
+              className="text-gray-800 hover:text-blue-600 transition"
             >
               Contact
-            </ScrollLink>
+            </a>
           </nav>
 
           {/* Кнопка CTA десктоп */}
@@ -77,7 +68,7 @@ export default function TopNav() {
             </a>
           </div>
 
-          {/* Mobile menu */}
+          {/* Бургер‑меню для мобильных */}
           <MobileMenu />
         </div>
       </div>
@@ -85,15 +76,14 @@ export default function TopNav() {
   );
 }
 
-// Простой бургер‑меню для мобильной версии
 function MobileMenu() {
   const [open, setOpen] = useState(false);
-
   const links = [
-    { to: "features", label: "Features" },
-    { to: "pricing", label: "Pricing" },
-    { to: "faq", label: "FAQ" },
-    { to: "contact", label: "Contact" },
+    { href: "#features", label: "Features" },
+    { href: "#pricing",  label: "Pricing"  },
+    { href: "#faq",      label: "FAQ"      },
+    { href: "#contact",  label: "Contact"  },
+    { href: "#demo",     label: "Watch Demo" },
   ];
 
   return (
@@ -107,27 +97,16 @@ function MobileMenu() {
 
       {open && (
         <div className="absolute right-4 top-full mt-2 w-44 bg-white/90 backdrop-blur-md shadow-lg rounded-lg overflow-hidden">
-          <nav className="flex flex-col">
-            {links.map(({ to, label }) => (
-              <ScrollLink
-                key={to}
-                to={to}
-                smooth
-                duration={300}
-                className="block px-4 py-2 text-gray-800 hover:bg-blue-50 transition"
-                onClick={() => setOpen(false)}
-              >
-                {label}
-              </ScrollLink>
-            ))}
+          {links.map(({ href, label }) => (
             <a
-              href="#demo"
-              className="block px-4 py-2 text-blue-600 hover:bg-blue-50 transition"
+              key={href}
+              href={href}
+              className="block px-4 py-2 text-gray-800 hover:bg-blue-50 transition"
               onClick={() => setOpen(false)}
             >
-              Watch Demo
+              {label}
             </a>
-          </nav>
+          ))}
         </div>
       )}
     </div>
