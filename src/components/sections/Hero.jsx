@@ -28,7 +28,7 @@ export default function Hero() {
             {/* CTA — только одна кнопка */}
             <div className="mt-8 flex justify-center md:justify-start">
               <a
-                href="#pricing"
+                href="#features"
                 className="px-8 py-3 rounded-full bg-white text-blue-700 font-semibold shadow-lg hover:shadow-xl transition text-center"
               >
                 Getting Started

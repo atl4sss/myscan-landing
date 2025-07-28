@@ -1,19 +1,21 @@
+// src/components/PresentationPage.jsx
+
 import TopNav from "./TopNav.jsx";
 import Hero from "./sections/Hero.jsx";
 import WaveSeparator from "./shape/WaveSeparator.jsx";
-import Stats from "./sections/Stats.jsx";             // MVP Highlights (как было)
+import Stats from "./sections/Stats.jsx";                 // MVP Highlights
 import Features from "./sections/Features.jsx";
-import FeatureTabs from "./sections/FeatureTabs.jsx"; // NEW
-import Gallery from "./sections/Gallery.jsx";         // NEW
-import UseCases from "./sections/UseCases.jsx";       // NEW
+import FeatureTabs from "./sections/FeatureTabs.jsx";     // NEW
+import Gallery from "./sections/Gallery.jsx";             // NEW
+import UseCases from "./sections/UseCases.jsx";           // NEW
 import PrivacyBadges from "./sections/PrivacyBadges.jsx"; // NEW
-import VideoDemo from "./sections/VideoDemo.jsx";     // NEW
+import VideoDemo from "./sections/VideoDemo.jsx";         // NEW
 import Pricing from "./sections/Pricing.jsx";
 import FAQ from "./sections/FAQ.jsx";
 import Contact from "./sections/Contact.jsx";
 import Footer from "./Footer.jsx";
 
-// NEW: уникальные секции
+// NEW: ваши уникальные секции
 import Roadmap from "./sections/Roadmap.jsx";
 import Comparison from "./sections/Comparison.jsx";
 
@@ -29,15 +31,19 @@ export default function PresentationPage() {
       {/* MVP HIGHLIGHTS */}
       <Stats />
 
-      {/* NEW: ROADMAP (таймлайн) — другой визуальный язык */}
+      {/* ROADMAP (таймлайн). 
+          Оборачиваем в контейнер с отрицательным margin-top, 
+          чтобы убрать лишнее пространство сверху */}
       <WaveSeparator flip color="#ffffff" />
-      <Roadmap />
+      <div className="-mt-8 md:-mt-12">
+        <Roadmap />
+      </div>
 
-      {/* NEW: COMPARISON (таблица преимуществ) — ещё один формат */}
+      {/* COMPARISON (таблица преимуществ) */}
       <WaveSeparator color="#eff6ff" />
       <Comparison />
 
-      {/* Остальные секции как были */}
+      {/* ОСТАЛЬНЫЕ СЕКЦИИ */}
       <WaveSeparator flip color="#ffffff" />
       <Features />
       <FeatureTabs />
@@ -45,7 +51,7 @@ export default function PresentationPage() {
       <PrivacyBadges />
       <UseCases />
 
-      {/* Видео-демо (замени ID на свой) */}
+      {/* Видео-демо (замените ID на ваш) */}
       <VideoDemo youtubeId="dQw4w9WgXcQ" />
 
       {/* Pricing */}
