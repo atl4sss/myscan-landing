@@ -52,7 +52,7 @@ export default function PresentationPage() {
       <UseCases />
 
       {/* Видео-демо (замените ID на ваш) */}
-      <VideoDemo youtubeId="dQw4w9WgXcQ" />
+      <VideoDemo youtubeId="x0mFJE1dHjk" />
 
       {/* Pricing */}
       <section id="pricing" className="bg-white">
