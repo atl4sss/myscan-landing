@@ -28,13 +28,13 @@ export default function Pricing() {
         />
         <Card
           name="Plus"
-          price="₸4990/mo"
-          features={["100 scans", "25 Deep-analysis PDF Reports", "Up to 40 AI chat messages"]}
+          price="₸6 990/mo"
+          features={["250 scans", "25 Deep-analysis PDF Reports", "Up to 40 AI chat messages"]}
         />
         <Card
           name="Premium"
-          price="₸15990/mo"
-          features={["Up to 650 scans", "70 Deep-analysis PDF Reports", "100 AI chat messagesl"]}
+          price="₸19990/mo"
+          features={["Up to 950 scans", "70 Deep-analysis PDF Reports", "100 AI chat messagesl"]}
         />
       </div>
     </div>
