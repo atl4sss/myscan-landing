@@ -17,7 +17,7 @@ export default function VideoDemo({ youtubeId = "dQw4w9WgXcQ" }) { // замен
           <div className="relative w-full aspect-video">
             <iframe
               className="absolute inset-0 w-full h-full"
-              src={`https://youtube.com/shorts/zDUS9n9vMCc?feature=share`}
+              src={`https://youtu.be/x0mFJE1dHjk`}
               title="MyScan Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
