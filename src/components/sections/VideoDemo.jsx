@@ -1,6 +1,6 @@
 import SectionReveal from "../SectionReveal.jsx";
 
-export default function VideoDemo({ youtubeId = "dQw4w9WgXcQ" }) { // заменишь на свой ID
+export default function VideoDemo({ youtubeId = "x0mFJE1dHjk" }) { // заменишь на свой ID
   return (
     <section id="demo" className="bg-white">
       <div className="container mx-auto px-4 py-20">
@@ -17,7 +17,7 @@ export default function VideoDemo({ youtubeId = "dQw4w9WgXcQ" }) { // замен
           <div className="relative w-full aspect-video">
             <iframe
               className="absolute inset-0 w-full h-full"
-              src={`https://youtu.be/x0mFJE1dHjk?si=mE_cYLgX39LuHD6T`}
+              src={`https://www.youtube.com/embed/${youtubeId}?rel=0`}
               title="MyScan Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
