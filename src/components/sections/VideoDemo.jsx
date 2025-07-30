@@ -1,6 +1,6 @@
 import SectionReveal from "../SectionReveal.jsx";
 
-export default function VideoDemo({ youtubeId = "x0mFJE1dHjk" }) { // заменишь на свой ID
+export default function VideoDemo({ youtubeId = "2nKS7fzQ1dw" }) { // заменишь на свой ID
   return (
     <section id="demo" className="bg-white">
       <div className="container mx-auto px-4 py-20">
